@@ -22,7 +22,11 @@ app.use((req, res, next) => {
 hbs.registerPartials(__dirname + '/views/partials');
 
 app.get('/', (req, res) => {
-    res.send('welcome');
+    res.render('welcome.hbs', {
+        pageTitle: 'Welcome Page',
+        welcomeMessage: 'Welcome to my website. Please make you selection to navigate.',
+        currentYear: new Date().getFullYear(),
+    });
 });
 
 app.get('/about', (req, res) => {
