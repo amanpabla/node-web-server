@@ -25,7 +25,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.get('/', (req, res) => {
     res.render('welcome.hbs', {
         pageTitle: 'Welcome Page',
-        welcomeMessage: 'Welcome to my website. Please make you selection to navigate.',
+        welcomeMessage: 'Welcome to my website. Please make you selection to navigate. Enjoy !!',
         currentYear: new Date().getFullYear(),
     });
 });
